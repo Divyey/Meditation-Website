@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FiMessageCircle, FiVideo, FiCalendar, FiX } from 'react-icons/fi'
+import { FiCalendar, FiX } from 'react-icons/fi'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const FloatingButtons = () => {
