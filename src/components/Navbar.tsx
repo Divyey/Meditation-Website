@@ -45,7 +45,7 @@ const Navbar = () => {
               <h1 className="text-xl font-display font-bold gradient-text">
                 One World One Family
               </h1>
-              <p className="text-xs text-gray-600">Meditation & Healing</p>
+              <p className="text-xs text-gray-600">Meditation & Blessing</p>
             </div>
           </a>
 

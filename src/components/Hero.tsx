@@ -78,7 +78,7 @@ const Hero = () => {
               <img 
                 src="/Logo.jpeg" 
                 alt="One World One Family Logo"
-                className="absolute inset-0 w-full h-full rounded-full object-cover shadow-xl animate-float border-4 border-white"
+                className="w-full h-full rounded-full object-cover shadow-xl animate-float border-4 border-white"
               />
               {/* Subtle glow */}
               <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-yellow-300 via-orange-300 to-red-300 opacity-20 blur-md"></div>

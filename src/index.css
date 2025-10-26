@@ -7,15 +7,14 @@
     @apply min-h-screen;
     @apply text-gray-800;
     background: radial-gradient(circle at center, 
-      #ffffff 0%, 
-      #fffef8 10%,
-      #fff9e0 20%,
-      #ffe4cc 35%,
-      #ffd4b3 50%,
-      #ffb380 65%,
-      #ff9966 80%,
-      #ff7733 90%,
-      #e65c00 100%);
+      #ffffff 0%,
+      #fffef8 15%,
+      #fff9e0 30%,
+      #ffe4cc 45%,
+      #ffd4b3 60%,
+      #ffb380 75%,
+      #ff9966 90%,
+      #ff7733 100%);
     background-attachment: fixed;
     position: relative;
     overflow-x: hidden;
@@ -31,33 +30,301 @@
     height: 150vw;
     background: radial-gradient(circle at center,
       rgba(255, 255, 255, 0.9) 0%,
-      rgba(255, 254, 248, 0.7) 5%,
-      rgba(255, 249, 224, 0.5) 10%,
-      rgba(255, 228, 204, 0.3) 15%,
-      rgba(255, 179, 128, 0.2) 25%,
-      rgba(255, 153, 102, 0.1) 35%,
-      transparent 50%);
+      rgba(255, 215, 0, 0.3) 20%,
+      rgba(255, 165, 0, 0.2) 40%,
+      rgba(255, 140, 0, 0.1) 60%,
+      transparent 80%);
     pointer-events: none;
     z-index: 0;
-    animation: pulseGlow 8s ease-in-out infinite;
+    animation: sunGlow 10s ease-in-out infinite;
   }
 
+  /* Dense sun rays radiating from center */
   body::after {
     content: '';
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      repeating-conic-gradient(from 0deg at 50% 50%,
-        rgba(255, 215, 0, 0.03) 0deg,
-        transparent 1deg,
-        transparent 5deg,
-        rgba(255, 119, 51, 0.02) 6deg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200vw;
+    height: 200vw;
+    background: conic-gradient(from 0deg,
+      transparent 0deg,
+      rgba(255, 215, 0, 0.12) 1deg,
+      transparent 2deg,
+      transparent 4deg,
+      rgba(255, 165, 0, 0.1) 5deg,
+      transparent 6deg,
+      transparent 8deg,
+      rgba(255, 140, 0, 0.08) 9deg,
+      transparent 10deg,
+      transparent 12deg,
+      rgba(255, 215, 0, 0.12) 13deg,
+      transparent 14deg,
+      transparent 16deg,
+      rgba(255, 165, 0, 0.1) 17deg,
+      transparent 18deg,
+      transparent 20deg,
+      rgba(255, 140, 0, 0.08) 21deg,
+      transparent 22deg,
+      transparent 24deg,
+      rgba(255, 215, 0, 0.12) 25deg,
+      transparent 26deg,
+      transparent 28deg,
+      rgba(255, 165, 0, 0.1) 29deg,
+      transparent 30deg,
+      transparent 32deg,
+      rgba(255, 140, 0, 0.08) 33deg,
+      transparent 34deg,
+      transparent 36deg,
+      rgba(255, 215, 0, 0.12) 37deg,
+      transparent 38deg,
+      transparent 40deg,
+      rgba(255, 165, 0, 0.1) 41deg,
+      transparent 42deg,
+      transparent 44deg,
+      rgba(255, 140, 0, 0.08) 45deg,
+      transparent 46deg,
+      transparent 48deg,
+      rgba(255, 215, 0, 0.12) 49deg,
+      transparent 50deg,
+      transparent 52deg,
+      rgba(255, 165, 0, 0.1) 53deg,
+      transparent 54deg,
+      transparent 56deg,
+      rgba(255, 140, 0, 0.08) 57deg,
+      transparent 58deg,
+      transparent 60deg,
+      rgba(255, 215, 0, 0.12) 61deg,
+      transparent 62deg,
+      transparent 64deg,
+      rgba(255, 165, 0, 0.1) 65deg,
+      transparent 66deg,
+      transparent 68deg,
+      rgba(255, 140, 0, 0.08) 69deg,
+      transparent 70deg,
+      transparent 72deg,
+      rgba(255, 215, 0, 0.12) 73deg,
+      transparent 74deg,
+      transparent 76deg,
+      rgba(255, 165, 0, 0.1) 77deg,
+      transparent 78deg,
+      transparent 80deg,
+      rgba(255, 140, 0, 0.08) 81deg,
+      transparent 82deg,
+      transparent 84deg,
+      rgba(255, 215, 0, 0.12) 85deg,
+      transparent 86deg,
+      transparent 88deg,
+      rgba(255, 165, 0, 0.1) 89deg,
+      transparent 90deg,
+      transparent 92deg,
+      rgba(255, 140, 0, 0.08) 93deg,
+      transparent 94deg,
+      transparent 96deg,
+      rgba(255, 215, 0, 0.12) 97deg,
+      transparent 98deg,
+      transparent 100deg,
+      rgba(255, 165, 0, 0.1) 101deg,
+      transparent 102deg,
+      transparent 104deg,
+      rgba(255, 140, 0, 0.08) 105deg,
+      transparent 106deg,
+      transparent 108deg,
+      rgba(255, 215, 0, 0.12) 109deg,
+      transparent 110deg,
+      transparent 112deg,
+      rgba(255, 165, 0, 0.1) 113deg,
+      transparent 114deg,
+      transparent 116deg,
+      rgba(255, 140, 0, 0.08) 117deg,
+      transparent 118deg,
+      transparent 120deg,
+      rgba(255, 215, 0, 0.12) 121deg,
+      transparent 122deg,
+      transparent 124deg,
+      rgba(255, 165, 0, 0.1) 125deg,
+      transparent 126deg,
+      transparent 128deg,
+      rgba(255, 140, 0, 0.08) 129deg,
+      transparent 130deg,
+      transparent 132deg,
+      rgba(255, 215, 0, 0.12) 133deg,
+      transparent 134deg,
+      transparent 136deg,
+      rgba(255, 165, 0, 0.1) 137deg,
+      transparent 138deg,
+      transparent 140deg,
+      rgba(255, 140, 0, 0.08) 141deg,
+      transparent 142deg,
+      transparent 144deg,
+      rgba(255, 215, 0, 0.12) 145deg,
+      transparent 146deg,
+      transparent 148deg,
+      rgba(255, 165, 0, 0.1) 149deg,
+      transparent 150deg,
+      transparent 152deg,
+      rgba(255, 140, 0, 0.08) 153deg,
+      transparent 154deg,
+      transparent 156deg,
+      rgba(255, 215, 0, 0.12) 157deg,
+      transparent 158deg,
+      transparent 160deg,
+      rgba(255, 165, 0, 0.1) 161deg,
+      transparent 162deg,
+      transparent 164deg,
+      rgba(255, 140, 0, 0.08) 165deg,
+      transparent 166deg,
+      transparent 168deg,
+      rgba(255, 215, 0, 0.12) 169deg,
+      transparent 170deg,
+      transparent 172deg,
+      rgba(255, 165, 0, 0.1) 173deg,
+      transparent 174deg,
+      transparent 176deg,
+      rgba(255, 140, 0, 0.08) 177deg,
+      transparent 178deg,
+      transparent 180deg,
+      rgba(255, 215, 0, 0.12) 181deg,
+      transparent 182deg,
+      transparent 184deg,
+      rgba(255, 165, 0, 0.1) 185deg,
+      transparent 186deg,
+      transparent 188deg,
+      rgba(255, 140, 0, 0.08) 189deg,
+      transparent 190deg,
+      transparent 192deg,
+      rgba(255, 215, 0, 0.12) 193deg,
+      transparent 194deg,
+      transparent 196deg,
+      rgba(255, 165, 0, 0.1) 197deg,
+      transparent 198deg,
+      transparent 200deg,
+      rgba(255, 140, 0, 0.08) 201deg,
+      transparent 202deg,
+      transparent 204deg,
+      rgba(255, 215, 0, 0.12) 205deg,
+      transparent 206deg,
+      transparent 208deg,
+      rgba(255, 165, 0, 0.1) 209deg,
+      transparent 210deg,
+      transparent 212deg,
+      rgba(255, 140, 0, 0.08) 213deg,
+      transparent 214deg,
+      transparent 216deg,
+      rgba(255, 215, 0, 0.12) 217deg,
+      transparent 218deg,
+      transparent 220deg,
+      rgba(255, 165, 0, 0.1) 221deg,
+      transparent 222deg,
+      transparent 224deg,
+      rgba(255, 140, 0, 0.08) 225deg,
+      transparent 226deg,
+      transparent 228deg,
+      rgba(255, 215, 0, 0.12) 229deg,
+      transparent 230deg,
+      transparent 232deg,
+      rgba(255, 165, 0, 0.1) 233deg,
+      transparent 234deg,
+      transparent 236deg,
+      rgba(255, 140, 0, 0.08) 237deg,
+      transparent 238deg,
+      transparent 240deg,
+      rgba(255, 215, 0, 0.12) 241deg,
+      transparent 242deg,
+      transparent 244deg,
+      rgba(255, 165, 0, 0.1) 245deg,
+      transparent 246deg,
+      transparent 248deg,
+      rgba(255, 140, 0, 0.08) 249deg,
+      transparent 250deg,
+      transparent 252deg,
+      rgba(255, 215, 0, 0.12) 253deg,
+      transparent 254deg,
+      transparent 256deg,
+      rgba(255, 165, 0, 0.1) 257deg,
+      transparent 258deg,
+      transparent 260deg,
+      rgba(255, 140, 0, 0.08) 261deg,
+      transparent 262deg,
+      transparent 264deg,
+      rgba(255, 215, 0, 0.12) 265deg,
+      transparent 266deg,
+      transparent 268deg,
+      rgba(255, 165, 0, 0.1) 269deg,
+      transparent 270deg,
+      transparent 272deg,
+      rgba(255, 140, 0, 0.08) 273deg,
+      transparent 274deg,
+      transparent 276deg,
+      rgba(255, 215, 0, 0.12) 277deg,
+      transparent 278deg,
+      transparent 280deg,
+      rgba(255, 165, 0, 0.1) 281deg,
+      transparent 282deg,
+      transparent 284deg,
+      rgba(255, 140, 0, 0.08) 285deg,
+      transparent 286deg,
+      transparent 288deg,
+      rgba(255, 215, 0, 0.12) 289deg,
+      transparent 290deg,
+      transparent 292deg,
+      rgba(255, 165, 0, 0.1) 293deg,
+      transparent 294deg,
+      transparent 296deg,
+      rgba(255, 140, 0, 0.08) 297deg,
+      transparent 298deg,
+      transparent 300deg,
+      rgba(255, 215, 0, 0.12) 301deg,
+      transparent 302deg,
+      transparent 304deg,
+      rgba(255, 165, 0, 0.1) 305deg,
+      transparent 306deg,
+      transparent 308deg,
+      rgba(255, 140, 0, 0.08) 309deg,
+      transparent 310deg,
+      transparent 312deg,
+      rgba(255, 215, 0, 0.12) 313deg,
+      transparent 314deg,
+      transparent 316deg,
+      rgba(255, 165, 0, 0.1) 317deg,
+      transparent 318deg,
+      transparent 320deg,
+      rgba(255, 140, 0, 0.08) 321deg,
+      transparent 322deg,
+      transparent 324deg,
+      rgba(255, 215, 0, 0.12) 325deg,
+      transparent 326deg,
+      transparent 328deg,
+      rgba(255, 165, 0, 0.1) 329deg,
+      transparent 330deg,
+      transparent 332deg,
+      rgba(255, 140, 0, 0.08) 333deg,
+      transparent 334deg,
+      transparent 336deg,
+      rgba(255, 215, 0, 0.12) 337deg,
+      transparent 338deg,
+      transparent 340deg,
+      rgba(255, 165, 0, 0.1) 341deg,
+      transparent 342deg,
+      transparent 344deg,
+      rgba(255, 140, 0, 0.08) 345deg,
+      transparent 346deg,
+      transparent 348deg,
+      rgba(255, 215, 0, 0.12) 349deg,
+      transparent 350deg,
+      transparent 352deg,
+      rgba(255, 165, 0, 0.1) 353deg,
+      transparent 354deg,
+      transparent 356deg,
+      rgba(255, 140, 0, 0.08) 357deg,
+      transparent 358deg,
+      transparent 360deg);
     pointer-events: none;
     z-index: 0;
+    animation: sunRays 60s linear infinite;
   }
+
 
   html {
     scroll-behavior: smooth;
@@ -68,14 +335,23 @@
     z-index: 1;
   }
 
-  @keyframes pulseGlow {
+  @keyframes sunGlow {
     0%, 100% {
-      opacity: 0.8;
+      opacity: 0.7;
       transform: translate(-50%, -50%) scale(1);
     }
     50% {
       opacity: 1;
-      transform: translate(-50%, -50%) scale(1.05);
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
+
+  @keyframes sunRays {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
     }
   }
 }
@@ -88,7 +364,7 @@
   }
 
   .glass-effect {
-    @apply bg-white/80 backdrop-blur-md;
+    @apply bg-white/90 backdrop-blur-md;
     @apply border border-orange-100/30;
     @apply shadow-xl shadow-orange-200/20;
   }

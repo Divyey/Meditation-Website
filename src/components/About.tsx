@@ -77,7 +77,7 @@ const About = () => {
         viewport={{ once: true }}
         className="max-w-5xl mx-auto mb-16"
       >
-        <div className="glass-effect rounded-3xl p-10 md:p-12">
+        <div className="glass-effect rounded-3xl p-8 md:p-12">
           <div className="flex items-center justify-center mb-6">
             <div className="text-center">
               <h3 className="text-2xl md:text-3xl font-display font-bold text-orange-700 mb-2">
