@@ -98,20 +98,25 @@
     @apply bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500;
     @apply text-white font-semibold;
     @apply hover:from-orange-600 hover:via-amber-600 hover:to-yellow-600;
+    @apply focus:from-orange-600 focus:via-amber-600 focus:to-yellow-600;
     @apply transition-all duration-300;
     @apply shadow-lg shadow-orange-300/50 hover:shadow-xl hover:shadow-orange-400/60;
-    @apply transform hover:scale-105;
+    @apply focus:shadow-xl focus:shadow-orange-400/60;
+    @apply transform hover:scale-105 focus:scale-105;
+    @apply focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2;
   }
 
   .btn-secondary {
     @apply px-8 py-4 rounded-full;
     @apply bg-white/90 backdrop-blur-sm;
     @apply text-orange-700 font-semibold;
-    @apply hover:bg-white;
+    @apply hover:bg-white focus:bg-white;
     @apply transition-all duration-300;
     @apply shadow-md shadow-orange-200/30 hover:shadow-lg hover:shadow-orange-300/40;
+    @apply focus:shadow-lg focus:shadow-orange-300/40;
     @apply border border-orange-200;
-    @apply transform hover:scale-105;
+    @apply transform hover:scale-105 focus:scale-105;
+    @apply focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2;
   }
 
   .section-container {

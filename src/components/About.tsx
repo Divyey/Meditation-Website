@@ -90,11 +90,11 @@ const About = () => {
 
           <div className="max-w-3xl mx-auto">
             <blockquote className="text-center mb-8">
-              <div className="text-3xl md:text-4xl font-display font-bold gradient-text italic mb-4">
-                "There is no 'other.' We are one."
+              <div className="text-3xl md:text-4xl font-display font-bold gradient-text italic mb-6">
+                "Every soul is a point of light, radiating love and peace."
               </div>
-              <div className="text-2xl md:text-3xl font-display font-bold gradient-text italic">
-                "When we bless others, we bless ourselves."
+              <div className="text-2xl md:text-3xl font-display font-bold gradient-text italic mb-6">
+                "When we meditate together, we heal together and make this world a heaven."
               </div>
             </blockquote>
 

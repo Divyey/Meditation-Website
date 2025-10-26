@@ -78,12 +78,10 @@ const Hero = () => {
               <img 
                 src="/Logo.jpeg" 
                 alt="One World One Family Logo"
-                className="absolute inset-0 w-full h-full rounded-full object-cover shadow-2xl animate-float border-4 border-white"
+                className="absolute inset-0 w-full h-full rounded-full object-cover shadow-xl animate-float border-4 border-white"
               />
-              {/* Outer glow */}
-              <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-yellow-300 via-orange-300 to-red-300 opacity-40 blur-xl animate-pulse"></div>
-              {/* Additional radiance */}
-              <div className="absolute -inset-8 rounded-full bg-gradient-to-br from-orange-200 via-yellow-200 to-red-200 opacity-20 blur-2xl animate-radiate"></div>
+              {/* Subtle glow */}
+              <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-yellow-300 via-orange-300 to-red-300 opacity-20 blur-md"></div>
             </div>
           </motion.div>
 
@@ -130,6 +128,47 @@ const Hero = () => {
                 <p className="text-lg text-gray-700 leading-relaxed">
                   At <span className="font-semibold gradient-text">One World One Family</span>, we believe that when even one person meditates with pure intention, the whole world receives a blessing. Together, we create a circle of peace that connects hearts, heals relationships, and restores harmony to families and humanity.
                 </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* YouTube Video Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
+            className="max-w-4xl mx-auto mb-12"
+          >
+            <div className="glass-effect rounded-2xl p-8">
+              <h3 className="text-2xl font-display font-bold text-orange-700 mb-6 text-center">
+                Experience Our Meditation
+              </h3>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
+            <iframe
+              className="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
+              src="https://www.youtube.com/embed/Hqr6Af65enA"
+              title="One World One Family Meditation - Experience Our Guided Meditation Session"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              loading="lazy"
+            ></iframe>
+              </div>
+              <p className="text-center text-gray-600 mt-4 text-sm">
+                Join us in this beautiful meditation journey
+              </p>
+              <div className="text-center mt-4">
+                <a
+                  href="https://www.youtube.com/@OneWorldOneFamilyMeditation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold transition-colors duration-200"
+                >
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  Subscribe to Our YouTube Channel
+                </a>
               </div>
             </div>
           </motion.div>

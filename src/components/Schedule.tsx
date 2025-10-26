@@ -68,6 +68,28 @@ const Schedule = () => {
         ))}
       </div>
 
+
+      {/* Spiritual Message */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="max-w-4xl mx-auto mb-12"
+      >
+        <div className="glass-effect rounded-2xl p-8 text-center bg-gradient-to-br from-orange-50 to-yellow-50 border-orange-200">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center text-white text-2xl mx-auto mb-6 shadow-lg">
+            <span>🕉️</span>
+          </div>
+          <h3 className="text-xl font-display font-bold text-orange-700 mb-4">
+            The Power of Divine Connection
+          </h3>
+          <p className="text-lg text-gray-700 leading-relaxed italic">
+            "When we start our day with meditation, we have God's strength and blessing to lead the day. When we end our day with God's remembrance and start our day with God's remembrance, it is considered to have meditated for 8 hours."
+          </p>
+        </div>
+      </motion.div>
+
       {/* Join Session Card */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
