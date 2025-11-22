@@ -6,37 +6,38 @@ const FloatingButtons = () => {
   const [showMeetOptions, setShowMeetOptions] = useState(false)
 
   const addToGoogleCalendar = () => {
+    // TEMPORARILY DISABLED FOR TESTING
     // Morning meditation event
-    const morningEvent = {
-      text: 'One World One Family - Morning Meditation',
-      dates: '20250101T001500Z/20250101T004500Z', // 5:45 AM - 6:15 AM IST (UTC)
-      details: 'Join our daily morning meditation session for peace, healing, and divine connection.\\n\\nJoin here: https://meet.google.com/cuk-myze-tva',
-      location: 'Online - Google Meet',
-      recur: 'RRULE:FREQ=DAILY',
-    }
+    // const morningEvent = {
+    //   text: 'One World One Family - Morning Meditation',
+    //   dates: '20250101T001500Z/20250101T004500Z', // 5:45 AM - 6:15 AM IST (UTC)
+    //   details: 'Join our daily morning meditation session for peace, healing, and divine connection.\\n\\nJoin here: https://meet.google.com/cuk-myze-tva',
+    //   location: 'Online - Google Meet',
+    //   recur: 'RRULE:FREQ=DAILY',
+    // }
 
     // Evening meditation event
-    const eveningEvent = {
-      text: 'One World One Family - Evening Meditation',
-      dates: '20250101T161500Z/20250101T164500Z', // 9:45 PM - 10:15 PM IST (UTC)
-      details: 'Join our daily evening meditation session for peace, healing, and divine connection.\\n\\nJoin here: https://meet.google.com/cuk-myze-tva',
-      location: 'Online - Google Meet',
-      recur: 'RRULE:FREQ=DAILY',
-    }
+    // const eveningEvent = {
+    //   text: 'One World One Family - Evening Meditation',
+    //   dates: '20250101T161500Z/20250101T164500Z', // 9:45 PM - 10:15 PM IST (UTC)
+    //   details: 'Join our daily evening meditation session for peace, healing, and divine connection.\\n\\nJoin here: https://meet.google.com/cuk-myze-tva',
+    //   location: 'Online - Google Meet',
+    //   recur: 'RRULE:FREQ=DAILY',
+    // }
 
     // Create morning event URL
-    const morningUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(morningEvent.text)}&dates=${morningEvent.dates}&details=${encodeURIComponent(morningEvent.details)}&location=${encodeURIComponent(morningEvent.location)}&recur=${encodeURIComponent(morningEvent.recur)}`
+    // const morningUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(morningEvent.text)}&dates=${morningEvent.dates}&details=${encodeURIComponent(morningEvent.details)}&location=${encodeURIComponent(morningEvent.location)}&recur=${encodeURIComponent(morningEvent.recur)}`
     
     // Open morning event (user can add evening event separately)
-    window.open(morningUrl, '_blank')
+    // window.open(morningUrl, '_blank')
     
     // Optional: Show alert to add evening session too
-    setTimeout(() => {
-      if (window.confirm('Would you like to add the Evening Meditation session to your calendar as well?')) {
-        const eveningUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eveningEvent.text)}&dates=${eveningEvent.dates}&details=${encodeURIComponent(eveningEvent.details)}&location=${encodeURIComponent(eveningEvent.location)}&recur=${encodeURIComponent(eveningEvent.recur)}`
-        window.open(eveningUrl, '_blank')
-      }
-    }, 500)
+    // setTimeout(() => {
+    //   if (window.confirm('Would you like to add the Evening Meditation session to your calendar as well?')) {
+    //     const eveningUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eveningEvent.text)}&dates=${eveningEvent.dates}&details=${encodeURIComponent(eveningEvent.details)}&location=${encodeURIComponent(eveningEvent.location)}&recur=${encodeURIComponent(eveningEvent.recur)}`
+    //     window.open(eveningUrl, '_blank')
+    //   }
+    // }, 500)
   }
 
   return (
@@ -65,8 +66,8 @@ const FloatingButtons = () => {
                 </div>
               </motion.button>
 
-              {/* Join Google Meet Button */}
-              <motion.a
+              {/* Join Google Meet Button - TEMPORARILY HIDDEN FOR TESTING */}
+              {/* <motion.a
                 href="https://meet.google.com/cuk-myze-tva"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -84,14 +85,13 @@ const FloatingButtons = () => {
                     <path fill="#ffba00" d="M63.5 0h-43v20.5h29V36l20-16.57V6c0-3.315-2.685-6-6-6z"/>
                   </svg>
                 </div>
-              </motion.a>
+              </motion.a> */}
             </motion.div>
           )}
         </AnimatePresence>
 
-        {/* Main Floating Buttons */}
-        <div className="flex flex-col gap-3">
-          {/* WhatsApp Group Button */}
+        {/* Main Floating Buttons - TEMPORARILY HIDDEN FOR TESTING */}
+        {/* <div className="flex flex-col gap-3">
           <a
             href="https://chat.whatsapp.com/ICgXcGslMfz1vGmIuAWZbe"
             target="_blank"
@@ -105,7 +105,6 @@ const FloatingButtons = () => {
             </svg>
           </a>
 
-          {/* Google Meet / Calendar Toggle Button */}
           <button
             onClick={() => setShowMeetOptions(!showMeetOptions)}
             className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-lg ${
@@ -128,7 +127,7 @@ const FloatingButtons = () => {
               </svg>
             )}
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Backdrop when options are open (mobile) */}

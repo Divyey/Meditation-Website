@@ -6,8 +6,9 @@ import Schedule from './components/Schedule'
 import Experience from './components/Experience'
 import GuidingThought from './components/GuidingThought'
 import JoinFamily from './components/JoinFamily'
+import MantraClock from './components/MantraClock'
 import Footer from './components/Footer'
-import FloatingButtons from './components/FloatingButtons'
+// import FloatingButtons from './components/FloatingButtons' // Temporarily hidden for testing
 
 function App() {
   const [isVisible, setIsVisible] = useState(false)
@@ -21,6 +22,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <MantraClock />
         <About />
         <Schedule />
         <Experience />
@@ -28,7 +30,8 @@ function App() {
         <JoinFamily />
       </main>
       <Footer />
-      <FloatingButtons />
+      {/* FloatingButtons temporarily hidden for testing */}
+      {/* <FloatingButtons /> */}
     </div>
   )
 }

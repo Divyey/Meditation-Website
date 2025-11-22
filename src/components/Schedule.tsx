@@ -105,14 +105,18 @@ const Schedule = () => {
         <p className="text-gray-700 mb-6">
           Our meditation sessions are open to all souls seeking peace, healing, and connection. Click below to join the live session.
         </p>
-        <a
+        {/* Google Meet Link - TEMPORARILY HIDDEN FOR TESTING */}
+        {/* <a
           href="https://meet.google.com/cuk-myze-tva"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary inline-block"
         >
           Join Live Meditation (Google Meet)
-        </a>
+        </a> */}
+        <div className="text-gray-500 italic">
+          Join link temporarily hidden for testing
+        </div>
         <p className="text-sm text-gray-600 mt-4">
           Morning: 5:50 AM – 6:20 AM IST | Evening: 9:50 PM – 10:20 PM IST
         </p>

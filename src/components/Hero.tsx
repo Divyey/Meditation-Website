@@ -157,7 +157,8 @@ const Hero = () => {
               <p className="text-center text-gray-600 mt-4 text-sm">
                 Join us in this beautiful meditation journey
               </p>
-              <div className="text-center mt-4">
+              {/* YouTube Channel Link - TEMPORARILY HIDDEN FOR TESTING */}
+              {/* <div className="text-center mt-4">
                 <a
                   href="https://www.youtube.com/@OneWorldOneFamilyMeditation"
                   target="_blank"
@@ -169,7 +170,7 @@ const Hero = () => {
                   </svg>
                   Subscribe to Our YouTube Channel
                 </a>
-              </div>
+              </div> */}
             </div>
           </motion.div>
 
@@ -193,14 +194,14 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 1.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <a 
+            {/* <a 
               href="https://meet.google.com/cuk-myze-tva"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
             >
               Join Live Meditation
-            </a>
+            </a> */}
             <a href="#schedule" className="btn-secondary">
               View Schedule
             </a>
