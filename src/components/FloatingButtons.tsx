@@ -1,44 +1,44 @@
 import { useState } from 'react'
-import { FiCalendar, FiX } from 'react-icons/fi'
+// import { FiCalendar, FiX } from 'react-icons/fi' // Temporarily unused
 import { motion, AnimatePresence } from 'framer-motion'
 
 const FloatingButtons = () => {
   const [showMeetOptions, setShowMeetOptions] = useState(false)
 
-  const addToGoogleCalendar = () => {
-    // TEMPORARILY DISABLED FOR TESTING
-    // Morning meditation event
-    // const morningEvent = {
-    //   text: 'One World One Family - Morning Meditation',
-    //   dates: '20250101T001500Z/20250101T004500Z', // 5:45 AM - 6:15 AM IST (UTC)
-    //   details: 'Join our daily morning meditation session for peace, healing, and divine connection.\\n\\nJoin here: https://meet.google.com/cuk-myze-tva',
-    //   location: 'Online - Google Meet',
-    //   recur: 'RRULE:FREQ=DAILY',
-    // }
+  // TEMPORARILY DISABLED FOR TESTING
+  // const addToGoogleCalendar = () => {
+  //   // Morning meditation event
+  //   // const morningEvent = {
+  //   //   text: 'One World One Family - Morning Meditation',
+  //   //   dates: '20250101T001500Z/20250101T004500Z', // 5:45 AM - 6:15 AM IST (UTC)
+  //   //   details: 'Join our daily morning meditation session for peace, healing, and divine connection.\\n\\nJoin here: https://meet.google.com/cuk-myze-tva',
+  //   //   location: 'Online - Google Meet',
+  //   //   recur: 'RRULE:FREQ=DAILY',
+  //   // }
 
-    // Evening meditation event
-    // const eveningEvent = {
-    //   text: 'One World One Family - Evening Meditation',
-    //   dates: '20250101T161500Z/20250101T164500Z', // 9:45 PM - 10:15 PM IST (UTC)
-    //   details: 'Join our daily evening meditation session for peace, healing, and divine connection.\\n\\nJoin here: https://meet.google.com/cuk-myze-tva',
-    //   location: 'Online - Google Meet',
-    //   recur: 'RRULE:FREQ=DAILY',
-    // }
+  //   // Evening meditation event
+  //   // const eveningEvent = {
+  //   //   text: 'One World One Family - Evening Meditation',
+  //   //   dates: '20250101T161500Z/20250101T164500Z', // 9:45 PM - 10:15 PM IST (UTC)
+  //   //   details: 'Join our daily evening meditation session for peace, healing, and divine connection.\\n\\nJoin here: https://meet.google.com/cuk-myze-tva',
+  //   //   location: 'Online - Google Meet',
+  //   //   recur: 'RRULE:FREQ=DAILY',
+  //   // }
 
-    // Create morning event URL
-    // const morningUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(morningEvent.text)}&dates=${morningEvent.dates}&details=${encodeURIComponent(morningEvent.details)}&location=${encodeURIComponent(morningEvent.location)}&recur=${encodeURIComponent(morningEvent.recur)}`
-    
-    // Open morning event (user can add evening event separately)
-    // window.open(morningUrl, '_blank')
-    
-    // Optional: Show alert to add evening session too
-    // setTimeout(() => {
-    //   if (window.confirm('Would you like to add the Evening Meditation session to your calendar as well?')) {
-    //     const eveningUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eveningEvent.text)}&dates=${eveningEvent.dates}&details=${encodeURIComponent(eveningEvent.details)}&location=${encodeURIComponent(eveningEvent.location)}&recur=${encodeURIComponent(eveningEvent.recur)}`
-    //     window.open(eveningUrl, '_blank')
-    //   }
-    // }, 500)
-  }
+  //   // Create morning event URL
+  //   // const morningUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(morningEvent.text)}&dates=${morningEvent.dates}&details=${encodeURIComponent(morningEvent.details)}&location=${encodeURIComponent(morningEvent.location)}&recur=${encodeURIComponent(morningEvent.recur)}`
+  //   
+  //   // Open morning event (user can add evening event separately)
+  //   // window.open(morningUrl, '_blank')
+  //   
+  //   // Optional: Show alert to add evening session too
+  //   // setTimeout(() => {
+  //   //   if (window.confirm('Would you like to add the Evening Meditation session to your calendar as well?')) {
+  //   //     const eveningUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eveningEvent.text)}&dates=${eveningEvent.dates}&details=${encodeURIComponent(eveningEvent.details)}&location=${encodeURIComponent(eveningEvent.location)}&recur=${encodeURIComponent(eveningEvent.recur)}`
+  //   //     window.open(eveningUrl, '_blank')
+  //   //   }
+  //   // }, 500)
+  // }
 
   return (
     <>
@@ -54,8 +54,8 @@ const FloatingButtons = () => {
               transition={{ duration: 0.2 }}
               className="flex flex-col gap-3 items-end"
             >
-              {/* Add to Calendar Button */}
-              <motion.button
+              {/* Add to Calendar Button - TEMPORARILY HIDDEN FOR TESTING */}
+              {/* <motion.button
                 onClick={addToGoogleCalendar}
                 className="flex items-center gap-3 bg-white text-orange-600 px-4 py-3 rounded-full shadow-lg border-2 border-orange-300"
                 aria-label="Add to Google Calendar"
@@ -64,7 +64,7 @@ const FloatingButtons = () => {
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center text-white shadow-md">
                   <FiCalendar className="text-lg" />
                 </div>
-              </motion.button>
+              </motion.button> */}
 
               {/* Join Google Meet Button - TEMPORARILY HIDDEN FOR TESTING */}
               {/* <motion.a

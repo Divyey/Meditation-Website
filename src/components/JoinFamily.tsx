@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiMail, FiPhone } from 'react-icons/fi'
+// import { FiMail, FiPhone } from 'react-icons/fi' // Temporarily unused
 
 const JoinFamily = () => {
 

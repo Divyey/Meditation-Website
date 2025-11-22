@@ -1,4 +1,5 @@
-import { FiHeart, FiMail, FiMessageCircle } from 'react-icons/fi'
+import { FiHeart } from 'react-icons/fi'
+// import { FiMail, FiMessageCircle } from 'react-icons/fi' // Temporarily unused
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
