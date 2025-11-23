@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { FiHeart } from 'react-icons/fi'
 // import { FiMail, FiMessageCircle } from 'react-icons/fi' // Temporarily unused
 
@@ -37,29 +38,24 @@ const Footer = () => {
               <h4 className="text-lg font-display font-bold text-gray-800 mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#home" className="text-gray-600 hover:text-orange-600 transition-colors duration-200">
+                  <Link to="/" className="text-gray-600 hover:text-orange-600 transition-colors duration-200">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#about" className="text-gray-600 hover:text-orange-600 transition-colors duration-200">
+                  <Link to="/about" className="text-gray-600 hover:text-orange-600 transition-colors duration-200">
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#schedule" className="text-gray-600 hover:text-orange-600 transition-colors duration-200">
+                  <Link to="/schedule" className="text-gray-600 hover:text-orange-600 transition-colors duration-200">
                     Meditation Schedule
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#experience" className="text-gray-600 hover:text-orange-600 transition-colors duration-200">
-                    What We Offer
-                  </a>
-                </li>
-                <li>
-                  <a href="#join" className="text-gray-600 hover:text-orange-600 transition-colors duration-200">
-                    Join Us
-                  </a>
+                  <Link to="/contact" className="text-gray-600 hover:text-orange-600 transition-colors duration-200">
+                    Contact Us
+                  </Link>
                 </li>
               </ul>
             </div>

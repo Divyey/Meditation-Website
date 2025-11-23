@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { FiHeart } from 'react-icons/fi'
 
 const Hero = () => {
@@ -202,9 +203,9 @@ const Hero = () => {
             >
               Join Live Meditation
             </a> */}
-            <a href="#schedule" className="btn-secondary">
+            <Link to="/schedule" className="btn-secondary">
               View Schedule
-            </a>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

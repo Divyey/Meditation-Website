@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { FiMenu, FiX } from 'react-icons/fi'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,12 +15,16 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false)
+  }, [location])
+
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Schedule', href: '#schedule' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Join Us', href: '#join' },
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Schedule', path: '/schedule' },
+    { name: 'Contact', path: '/contact' },
   ]
 
   return (
@@ -30,7 +36,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center space-x-3 group">
+          <Link to="/" className="flex items-center space-x-3 group">
             <div className="relative w-12 h-12">
               {/* Logo image */}
               <img 
@@ -47,26 +53,32 @@ const Navbar = () => {
               </h1>
               <p className="text-xs text-gray-600">Meditation & Blessing</p>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
-                className="text-gray-700 hover:text-orange-600 font-medium transition-colors duration-200 relative group"
+                to={link.path}
+                className={`font-medium transition-colors duration-200 relative group ${
+                  location.pathname === link.path
+                    ? 'text-orange-600'
+                    : 'text-gray-700 hover:text-orange-600'
+                }`}
               >
                 {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-yellow-500 group-hover:w-full transition-all duration-300"></span>
-              </a>
+                <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-orange-500 to-yellow-500 transition-all duration-300 ${
+                  location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}></span>
+              </Link>
             ))}
-            <a
-              href="#join"
+            <Link
+              to="/contact"
               className="btn-primary text-sm py-2 px-6"
             >
               Join Now
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -89,22 +101,26 @@ const Navbar = () => {
         <div className="md:hidden glass-effect border-t border-white/20">
           <div className="px-4 py-6 space-y-4">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
-                className="block text-gray-700 hover:text-orange-600 font-medium transition-colors duration-200 py-2"
+                to={link.path}
+                className={`block font-medium transition-colors duration-200 py-2 ${
+                  location.pathname === link.path
+                    ? 'text-orange-600'
+                    : 'text-gray-700 hover:text-orange-600'
+                }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#join"
+            <Link
+              to="/contact"
               className="block btn-primary text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Join Now
-            </a>
+            </Link>
           </div>
         </div>
       )}
